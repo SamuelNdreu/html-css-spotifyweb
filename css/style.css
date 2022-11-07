@@ -197,66 +197,7 @@
     div.down ul li:last-child {
     margin-bottom: 1rem;
     }
-    div.heart-folder {
-    margin: 1rem;
-    }
-    div.volumebar {
-    width: 7vw;
-    }
-    div.volumedown {
-    height: 4px;
-    width: 10%;
-    background-color: #7d7f84;
-    vertical-align: middle;
-    }
-    div.volumeup {
-    height: 4px;
-    width: 90%;
-    background-color: #3d3e41;
-    vertical-align: middle;
-    }
-    div.footerright {
-    margin: 0 1rem;
-    }
-    div.footerright i {
-    margin: 0 0.5rem;
-    }
-    div.player-buttons i {
-    margin: 0rem 1rem 1rem 1rem;
-    color: white;
-    font-size: 0.9;
-    }
 
-    div.player-buttons i:nth-child(3) {
-    font-size: 1.5rem;
-    font-size: 1.7rem;
-    }
-
-    div.play-bar-commands p {
-    color: white;
-    font-size: 0.9rem;
-    font-size: 0.7rem;
-    font-weight: bold;
-    }
-
-    div.play-bar {
-    width: 30vw;
-    }
-    div.played-bar {
-    height: 4px;
-    width: 25%;
-    background-color: #7d7f84;
-    vertical-align: middle;
-    margin-left: 20px;
-    }
-
-    div.to-play-bar {
-    height: 4px;
-    width: 75%;
-    background-color: #3d3e41;
-    vertical-align: middle;
-    margin-right: 20px;
-    }
     @media screen and (max-width: 992px) {
     div.disc {
         width: calc(100% / 4);
