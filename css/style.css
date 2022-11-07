@@ -4,9 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 /* Mobile View First */
 header{
-    width: 45px;
+    width: 60px;
     height: calc(100vh - 110px);
     background-color: black;
 }
@@ -20,6 +23,10 @@ footer{
     width: 100%;
     background-color: #282828;
 }
+a{
+    text-decoration: none;
+    color: #666a72;
+}
 .flex{
     display: flex;
 }
@@ -27,20 +34,89 @@ footer{
     display: flex;
     justify-content: center;
 }
-div.icons{
+/* Conteiner Sections */
+.container{
+    width: 100%;  
+}
+
+
+/* SECTION  TOP BAR */
+.top-bar{
+    width: 100%;
+    height: 85px;
+    background-color: #080b12;
+    text-align: end;
+    padding: 1.5rem .5rem;
+}
+
+#upgrade-button{
+    text-transform: uppercase;
     color: white;
-    margin: 0.3rem;
-    font-size: 2rem;
+    background-color: transparent;
+    padding: .5rem 2rem;
+    border-radius: 1.5rem;
+    font-weight: bold;
+}
+
+/* SECTION CATEGORIES */
+
+.list ul{
+    list-style-type: none;
+    text-align: center;
+    line-height: 2.6;
+}
+
+.list ul li{
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 .8rem;
+}
+/* SECTION RECENTLY PLAYED */
+.recently{
+    width: calc(100vw - 55px);    
 
 }
-div.upgrade{
-    justify-content: end;
-    height: 80px;
-    background-color: aqua;
+
+.recently h2{
+    color: white;
+    font-size: 1.8rem;
+    margin: 1rem .8rem;
 }
-div.upgrade button{
-    font-size: 1rem;
+
+.discs{
+    flex-wrap: wrap;
+    width: 100%;
 }
+
+.disc{
+    width: calc((100% / 2) - 1rem);
+    height: 180px;
+    background-color: #a970ff; 
+    margin: 0.5rem;
+    width: calc((100% / 2) - 1.6rem);
+    text-align: center;
+    margin: .2rem .8rem;
+}
+
+.album-img img{
+    max-width: 100%;
+    margin-bottom: 0.8rem;
+}
+
+.album-description h3{
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.album-description p{
+    color: #666a72;
+}
+
+
+
+
+
 
 
 
@@ -51,6 +127,10 @@ div.upgrade button{
         width: 233px;
         background-color: rgb(76, 0, 255); /* TEST */
     }
+    .recently{
+        width: calc(100vw - 233px);    
+    }
+
 
 }
 
@@ -58,10 +138,18 @@ div.upgrade button{
     header{
          background-color: rebeccapurple; /* TEST */
     }
+    .disc{
+
 }
 @media all and (min-width: 992px){
     header{
         background-color: yellowgreen; /* TEST */
     }
+    .disc{
+        margin: 1rem;
+        width: calc((100% / 6) - 2rem);
+    }
+
 }
 
+}
