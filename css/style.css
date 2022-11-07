@@ -1,155 +1,302 @@
-/* RESET */
-*{
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-/* Mobile View First */
-header{
-    width: 60px;
-    height: calc(100vh - 110px);
-    background-color: black;
-}
-main{
-    flex-grow: 1;
-    background-color: #141922;
-}
-
-footer{
-    height: 110px;
-    width: 100%;
-    background-color: #282828;
-}
-a{
-    text-decoration: none;
-    color: #666a72;
-}
-.flex{
+    }
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7d7f84;
+    }
+    /* flex properties css */
+    .flex {
     display: flex;
-}
-.flex-centered{
-    display: flex;
-    justify-content: center;
-}
-/* Conteiner Sections */
-.container{
-    width: 100%;  
-}
-
-
-/* SECTION  TOP BAR */
-.top-bar{
-    width: 100%;
-    height: 85px;
-    background-color: #080b12;
-    text-align: end;
-    padding: 1.5rem .5rem;
-}
-
-#upgrade-button{
-    text-transform: uppercase;
-    color: white;
-    background-color: transparent;
-    padding: .5rem 2rem;
-    border-radius: 1.5rem;
-    font-weight: bold;
-}
-
-/* SECTION CATEGORIES */
-
-.list ul{
-    list-style-type: none;
-    text-align: center;
-    line-height: 2.6;
-}
-
-.list ul li{
-    display: inline-block;
-    text-transform: uppercase;
-    margin: 0 .8rem;
-}
-/* SECTION RECENTLY PLAYED */
-.recently{
-    width: calc(100vw - 55px);    
-
-}
-
-.recently h2{
-    color: white;
-    font-size: 1.8rem;
-    margin: 1rem .8rem;
-}
-
-.discs{
+    }
+    .flex-wrap {
     flex-wrap: wrap;
+    }
+    .flex-centered {
+    justify-content: center;
+    }
+    .align-center {
+    align-items: center;
+    }
+    .flex-column {
+    flex-direction: column;
+    }
+    .flex-between {
+    justify-content: space-between;
+    }
+    /* Generic properties */
+    .container {
     width: 100%;
-}
-
-.disc{
-    width: calc((100% / 2) - 1rem);
-    height: 180px;
-    background-color: #a970ff; 
-    margin: 0.5rem;
-    width: calc((100% / 2) - 1.6rem);
-    text-align: center;
-    margin: .2rem .8rem;
-}
-
-.album-img img{
-    max-width: 100%;
-    margin-bottom: 0.8rem;
-}
-
-.album-description h3{
-    font-size: 1.2rem;
+    height: calc(100vh - 100px);
+    }
+    h1,
+    h2,
+    h3 {
     color: white;
-    margin-bottom: 0.5rem;
-}
-
-.album-description p{
-    color: #666a72;
-}
-
-
-
-
-
-
-
-
-/* media query transformations */
-@media all and (min-width: 576px){
-
-    header{
-        width: 233px;
-        background-color: rgb(76, 0, 255); /* TEST */
     }
-    .recently{
-        width: calc(100vw - 233px);    
+    h2 {
+    font-size: 1rem;
     }
-
-
-}
-
-@media all and (min-width: 768px){
-    header{
-         background-color: rebeccapurple; /* TEST */
+    h3 {
+    font-size: 1rem;
     }
-    .disc{
-
-}
-@media all and (min-width: 992px){
-    header{
-        background-color: yellowgreen; /* TEST */
+    hr {
+    width: 180px;
+    margin: 0.5rem 0;
     }
-    .disc{
-        margin: 1rem;
-        width: calc((100% / 6) - 2rem);
+    /* Specific Properties */
+    p.little {
+    text-align: start;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    }
+    header.main {
+    width: 230px;
+    height: 100%;
+    background-color: black;
+    }
+    main {
+    width: calc(100% - 230px);
+    background-color: #141922;
+    overflow-y: auto;
+    }
+    footer {
+    height: 100px;
+    background-color: #282828;
+    z-index: 3;
     }
 
-}
+    
+    header.secondary {
+    height: 90px;
+    background-color: #080b12;
+    text-align: right;
+    }
+    button.upgrade {
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    background-color: #141922;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    margin-top: 1.3rem;
+    margin-right: 1rem;
+    }
+    button.upgrade:hover {
+    transform: scale(1.1);
+    }
+    nav.sec-navbar {
+    text-align: center;
+    padding-top: 1rem;
+    }
+    nav.sec-navbar ul li {
+    display: inline;
+    list-style: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    }
+    li:hover {
+    color: white;
+    cursor: pointer;
+    }
+    div.discs-firstrow {
+    padding: 1rem 3rem;
+    text-align: center;
+    }
+    div.discs-firstrow h1 {
+    padding-bottom: 1rem;
+    text-align: start;
+    }
+    div.discs-firstrow h2 {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    line-height: 100%;
+    }
+    div.discs-firstrow p {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem;
+    }
+    div.disc {
+    width: calc(100% / 6);
+    }
+    figure {
+    position: relative;
+    }
+    figure img {
+    width: 100%;
+    padding-right: 1rem;
+    }
+    /* Button Section */
+    .play-button {
+    font-size: 3.5rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    display: none;
+    }
+/* hover */
+    figure.round img {
+    border-radius: 50%;
+    }
+    header.main img.logo {
+    width: 60%;
+    margin: 1rem 0 0 1rem;
+    }
+    header.main img.logo-mini {
+    width: 60%;
+    margin: 1rem 0 0 0.5rem;
+    display: none;
+    }
+    /* Side bar hide&seek */
+    div.vanish {
+    display: none;
+    }
+    header.main ul li {
+    list-style-type: none;
+    margin-left: 2rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    }
+    header.main ul li:first-child {
+    margin-top: 2rem;
+    }
+    header.main ul li img {
+    width: 12%;
+    }
+    header.main h3 {
+    margin: 1rem 0 0 1rem;
+    }
+    header.main ul.playlist i {
+    font-size: 3rem;
+    vertical-align: middle;
+    }
+    header.main ul.playlist li {
+    padding: 0.5rem 0;
+    }
+    /*Div containers  */
+    div.down ul li:first-child {
+    font-size: 0.9rem;
+    }
+    div.down img.download {
+    vertical-align: middle;
+    font-size: 1rem;
+    margin: 1rem;
+    }
+    div.down img.profile {
+    background-color: #808080;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 1rem;
+    }
+    div.down ul li:last-child {
+    margin-bottom: 1rem;
+    }
+    div.heart-folder {
+    margin: 1rem;
+    }
+    div.volumebar {
+    width: 7vw;
+    }
+    div.volumedown {
+    height: 4px;
+    width: 10%;
+    background-color: #7d7f84;
+    vertical-align: middle;
+    }
+    div.volumeup {
+    height: 4px;
+    width: 90%;
+    background-color: #3d3e41;
+    vertical-align: middle;
+    }
+    div.footerright {
+    margin: 0 1rem;
+    }
+    div.footerright i {
+    margin: 0 0.5rem;
+    }
+    div.player-buttons i {
+    margin: 0rem 1rem 1rem 1rem;
+    color: white;
+    font-size: 0.9;
+    }
 
-}
+    div.player-buttons i:nth-child(3) {
+    font-size: 1.5rem;
+    font-size: 1.7rem;
+    }
+
+    div.play-bar-commands p {
+    color: white;
+    font-size: 0.9rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    }
+
+    div.play-bar {
+    width: 30vw;
+    }
+    div.played-bar {
+    height: 4px;
+    width: 25%;
+    background-color: #7d7f84;
+    vertical-align: middle;
+    margin-left: 20px;
+    }
+
+    div.to-play-bar {
+    height: 4px;
+    width: 75%;
+    background-color: #3d3e41;
+    vertical-align: middle;
+    margin-right: 20px;
+    }
+    @media screen and (max-width: 992px) {
+    div.disc {
+        width: calc(100% / 4);
+    }
+    }
+    @media screen and (max-width: 768px) {
+    div.disc {
+        width: calc(100% / 2);
+    }
+    div.heart-folder {
+        flex-direction: column;
+    }
+    }
+    @media screen and (max-width: 576px){
+    header.main {
+        width: 50px;
+    }
+    main {
+        width: calc(100% - 50px);
+    }
+    header.main img.logo {
+        display: none;
+    }
+    header.main ul li {
+        display: none;
+    }
+    header.main h3 {
+        display: none;
+    }
+    header.main img.logo-mini {
+        display: inline;
+        margin-bottom: 1rem;
+    }
+    div.vanish {
+        display: inline-block;
+        align-items: center;
+    }
+    div.vanish img {
+        width: 60%;
+        margin-left: 0.6rem;
+        margin-bottom: 0.7rem;
+    }
+    }

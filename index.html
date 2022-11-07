@@ -1,121 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Spotify Web</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-
-    </head>
-
-    <body>
-        <div class="flex">
-            <header>
-                <div class="icons flex-centered">
-                    <ul>
-                        <li><a href=""></a></li>
-                    </ul>
-                    
-                </div>
-
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Spotify Web</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+            <link rel="stylesheet" href="./css/style.css">
+        </head>
+        <!-- Main Menu Side Bar -->
+        <div class="container flex">
+        <header class="main flex flex-column flex-between">
+            <div class="vanish">
+            <img src="img/logo-small.svg" alt="logo mini" class="logo-mini" />
+            <p><img src="img/home.svg" alt="home" /></p>
+            <p><img src="img/search.svg" alt="search" /></p>
+            <p><img src="img/libreria.svg" alt="library" /></p>
+            </div>
+            <!-- Desktop-Tablet Menu Hidden in xs break-point -->
+            <div>
+            <img src="img/logo.svg" alt="logo" class="logo" />
+            <ul>
+                <li><img src="img/home.svg" alt="home" />Home</li>
+                <li><img src="img/search.svg" alt="search" />Cerca</li>
+                <li><img src="img/libreria.svg" alt="library" />La tua libreria</li>
+            </ul>
+            <h3>PLAYLIST</h3>
+            <ul class="playlist">
+                <li><i class="fa-regular fa-square-plus"></i> Crea Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+                <li>Nome Playlist</li>
+            </ul>
+            </div>
+            <!-- Main Little section of Download ad Profile Button Section -->
+            <div class="down">
+            <ul>
+                <li>
+                <img
+                    src="img/download.svg"
+                    alt="download"
+                    class="download"
+                />Installa app
+                </li>
+                <li><hr /></li>
+                <li>
+                <img src="img/profile.svg" alt="profile" class="profile" />John
+                Doe
+                </li>
+            </ul>
+            <div class="vanish flex flex-column flex-centered align-center">
+                <img src="img/download.svg" alt="download" class="download" />
+                <img src="img/profile.svg" alt="profile" class="profile" />
+            </div>
+            </div>
+        </header>
+        <!-- Main section with plenty of discs -->
+        <main>
+            <header class="secondary">
+            <button class="upgrade">EFFETTUA L'UPGRADE</button>
             </header>
-
-            <main>
-                <section class="top">
-                    <div class="top-bar ">
-                        <button id="upgrade-button">Effettua l'upgrade</button>
-                    </div>
-                </section>
-                <!-- Section Categories Music Playlist -->
-                <section class="categories container">
-                    <div class="list">
-                        <ul>
-                            <li><a href="">In evidenza</a></li>
-                            <li><a href="">Podcast</a></li>
-                            <li><a href="">Classifiche</a></li>
-                            <li><a href="">Generi e Mood</a></li>
-                            <li><a href="">Nuove uscite</a></li>
-                            <li><a href="">Scopri</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- Section Categories Recently Played Container -->
-                <section class="recently container">
-                    <h2>Recent played</h2>
-                    <div class="recent discs flex">
-                        <div class="disc">
-                            <div class="album-img">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                            <div class="album-description">
-                                <h3>Heavy Metal</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                        <div class="disc">
-                            <div class="album-img">
-                                <img src="./img/stranger.jpeg" alt="">
-                            </div>
-                            <div class="album-description">
-                                <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
-                                <p>Kyle Dixon & Michael Stein</p>
-                            </div>
-                        </div>
-                        <div class="disc">
-                            <div class="album-img">
-                                <img src="./img/aquietplace.jpeg" alt="">
-                            </div>
-                            <div class="album-description">
-                                <h3>A quiet place</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                        <div class="disc">
-                            <div class="album-img">
-                                <img src="./img/split.jpeg" alt="">
-                            </div>
-                            <div class="album-description">
-                                <h3>Split</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                        <div class="disc">
-                            <div class="album-img">
-                                <img src="./img/cure.jpeg" alt="">
-                            </div>
-                            <div class="album-description">
-                                <h3>A cure for wellness</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                        <div class="disc">
-                            <div class="album-img">
-                                <img src="./img/sinister.jpeg" alt="">
-                            </div>
-                            <div class="album-description">
-                                <h3>Sinister</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-
-                        
-                    </div>
-                    
+            <nav class="sec-navbar flex flex-centered">
+            <ul>
+                <li>IN EVIDENZA</li>
+                <li>PODCAST</li>
+                <li>CLASSIFICHE</li>
+                <li>GENERI E MOOD</li>
+                <li>NUOVE USCITE</li>
+                <li>SCOPRI</li>
+            </ul>
+            </nav>
+            <!-- Main Disc Library -->
+            <section class="discs-library">
+            <div class="discs-firstrow">
+                <h1>Recently Played</h1>
+                <div class="discs flex flex-wrap">
+                <div class="disc">
+                    <figure>
+                    <img src="img/metal_lifting.jpg" alt="heavy metal" />
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    </figure>
+                    <figcaption>
+                    <h2>Heavy metal</h2>
+                    <p>Subtitle</p>
+                    </figcaption>
                 </div>
-
-            </main>
+                <!-- Section with Hover Elements -->
+                <div class="disc">
+                    <figure>
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    <img src="img/stranger.jpeg" alt="stranger things" />
+                    </figure>
+                    <figcaption>
+                    <h2>
+                        Stranger Things, Vol.1 (a Netflix Original Series Soundtrack
+                    </h2>
+                    <p>Kyle Dixon & Michael Stein</p>
+                    </figcaption>
+                </div>
+                <div class="disc">
+                    <figure>
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    <img src="img/aquietplace.jpeg" alt="a quiet place" />
+                    </figure>
+                    <figcaption>
+                    <h2>A Quiet Place</h2>
+                    <p>Subtitle</p>
+                    </figcaption>
+                </div>
+                <div class="disc">
+                    <figure>
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    <img src="img/split.jpeg" alt="split" />
+                    </figure>
+                    <figcaption>
+                    <h2>Split</h2>
+                    <p>Subtitle</p>
+                    </figcaption>
+                </div>
+                <div class="disc">
+                    <figure>
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    <img src="img/cure.jpeg" alt="cure for wellness" />
+                    </figure>
+                    <figcaption>
+                    <h2>A cure for Wellness</h2>
+                    <p>Subtitle</p>
+                    </figcaption>
+                </div>
+                <div class="disc">
+                    <figure>
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    <img src="img/sinister.jpeg" alt="sinister" />
+                    </figure>
+                    <figcaption>
+                    <h2>Sinister</h2>
+                    <p>Subtitle</p>
+                    </figcaption>
+                </div>
+                </div>
+            </div>
+            <!-- first row discs section -->
+            <div class="discs-firstrow">
+                <h1>Creato per John Doe</h1>
+                <p class="little">
+                Più ascolti, più accurati saranno i suggerimenti.
+                </p>
+                <div class="discs flex flex-wrap">
+                <div class="disc">
+                    <figure>
+                    <img src="img/radar.jpeg" alt="radar" />
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    </figure>
+                    <figcaption>
+                    <h2>Release Radar</h2>
+                    </figcaption>
+                </div>
+                <div class="disc">
+                    <figure>
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    <img src="img/mixdaily.jpeg" alt="daily mix" />
+                    </figure>
+                    <figcaption>
+                    <h2>Daily Mix 1</h2>
+                    </figcaption>
+                </div>
+                </div>
+            </div>
+            <div class="discs-firstrow">
+                <h1>Artisti più popolari</h1>
+                <p class="little">
+                Più ascolti, più accurati saranno i suggerimenti.
+                </p>
+                <div class="discs flex flex-wrap">
+                <div class="disc">
+                    <figure class="round">
+                    <img src="img/youg.jpeg" alt="lana" />
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    </figure>
+                    <figcaption>
+                    <h2>Lana del Rey</h2>
+                    </figcaption>
+                </div>
+                <div class="disc">
+                    <figure class="round">
+                    <span class="play-button"
+                        ><i class="fa-regular fa-circle-play"></i
+                    ></span>
+                    <img src="img/einaudi.jpeg" alt="daily mix" />
+                    </figure>
+                    <figcaption>
+                    <h2>Einaudi</h2>
+                    </figcaption>
+                </div>
+                </div>
+            </div>
+            </section>
+        </main>
         </div>
-
+        <!-- main footer to build with player and menu options -->
         <footer>
-
+            
         </footer>
-
     </body>
+    </html>
 
-</html>
+    </html>
