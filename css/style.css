@@ -1,80 +1,165 @@
-    * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     }
-    body {
+body {
     font-family: Arial, Helvetica, sans-serif;
     color: #7d7f84;
     }
     /* flex properties css */
-    .flex {
+.flex {
     display: flex;
     }
-    .flex-wrap {
+.flex-wrap {
     flex-wrap: wrap;
     }
-    .flex-centered {
+.flex-centered {
     justify-content: center;
     }
-    .align-center {
+.align-center {
     align-items: center;
     }
-    .flex-column {
+.flex-column {
     flex-direction: column;
     }
-    .flex-between {
+.flex-between {
     justify-content: space-between;
     }
     /* Generic properties */
-    .container {
+.container {
     width: 100%;
     height: calc(100vh - 100px);
     }
-    h1,
-    h2,
-    h3 {
+h1,
+h2,
+h3 {
     color: white;
     }
-    h2 {
+h2 {
     font-size: 1rem;
     }
-    h3 {
+h3 {
     font-size: 1rem;
     }
-    hr {
+hr {
     width: 180px;
     margin: 0.5rem 0;
     }
-    /* Specific Properties */
-    p.little {
+/* Specific Properties */
+p.little {
     text-align: start;
     margin-bottom: 1rem;
     font-size: 0.9rem;
     }
-    header.main {
+header.main {
     width: 230px;
     height: 100%;
     background-color: black;
     }
-    main {
+main {
     width: calc(100% - 230px);
     background-color: #141922;
     overflow-y: auto;
     }
-    footer {
+    /* Footer section with player display container */
+footer {
     height: 100px;
     background-color: #282828;
     z-index: 3;
+    position: relative;
+    overflow: hidden;
+    }
+footer img {
+    width: 10%;
+    height: 10%;
+    display: block;
+    margin: 1rem;
+        }
+
+footer p.sinister {
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 1.2rem;
+    cursor: pointer;
+}
+p.footerlittle {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #7d7f84;
+    }
+    /* Player Structure */
+/* MAIN FOOTER SECTION WITH VOLUME SECTION */
+div.heart-folder {
+    margin: 1rem;
+    }
+div.volumebar {
+    width: 7vw;
+    }
+div.volumedown {
+    height: 4px;
+    width: 10%;
+    background-color: #7d7f84;
+    vertical-align: middle;
+    }
+div.volumeup {
+    height: 4px;
+    width: 90%;
+    background-color: #3d3e41;
+    vertical-align: middle;
+    }
+div.footerright {
+    margin: 0 1rem;
+    }
+div.footerright i {
+    margin: 0 0.5rem;
+    }
+div.player-buttons i {
+    margin: 0rem 1rem 1rem 1rem;
+    color: white;
+    font-size: 0.9;
     }
 
+div.player-buttons i:nth-child(3) {
+    font-size: 1.5rem;
+    font-size: 1.7rem;
+    }
+
+div.play-bar-commands p {
+    color: white;
+    font-size: 0.9rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    }
+
+div.play-bar {
+    width: 30vw;
+    }
+div.played-bar {
+    height: 4px;
+    width: 25%;
+    background-color: #7d7f84;
+    vertical-align: middle;
+    margin-left: 20px;
+    }
+
+div.to-play-bar {
+    height: 4px;
+    width: 75%;
+    background-color: #3d3e41;
+    vertical-align: middle;
+    margin-right: 20px;
+    }
+        
+/* Secondary Header */
     
-    header.secondary {
+header.secondary {
     height: 90px;
     background-color: #080b12;
     text-align: right;
     }
-    button.upgrade {
+button.upgrade {
     border: 1px solid white;
     color: white;
     font-weight: bold;
@@ -84,56 +169,57 @@
     margin-top: 1.3rem;
     margin-right: 1rem;
     }
-    button.upgrade:hover {
+button.upgrade:hover {
     transform: scale(1.1);
     }
-    nav.sec-navbar {
+nav.sec-navbar {
     text-align: center;
     padding-top: 1rem;
     }
-    nav.sec-navbar ul li {
+nav.sec-navbar ul li {
     display: inline;
     list-style: none;
     font-size: 0.7rem;
     font-weight: bold;
     padding: 0 1rem;
     }
-    li:hover {
+li:hover {
     color: white;
     cursor: pointer;
     }
-    div.discs-firs-trow {
+div.discs-firs-trow {
     padding: 1rem 3rem;
     text-align: center;
     }
-    div.discs-first-row h1 {
+div.discs-first-row h1 {
     padding-bottom: 1rem;
     text-align: start;
     }
-    div.discs-first-row h2 {
+div.discs-first-row h2 {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
     line-height: 100%;
     }
-    div.discs-first-row p {
+div.discs-first-row p {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 0.9rem;
     }
-    div.disc {
+div.disc {
     width: calc(100% / 6);
     
     }
-    figure {
+figure {
     position: relative;
     }
-    figure img {
+figure img {
     width: 100%;
     padding-right: 1rem;
     
 }
-    /* Button Section */
-    .play-button {
+
+/* Button Section */
+.play-button {
     font-size: 3.5rem;
     color: white;
     position: absolute;
@@ -143,69 +229,84 @@
     display: none;
     }
 /* hover */
-    figure.round img {
+figure.circle img {
     border-radius: 50%;
     }
-    header.main img.logo {
+header.main img.logo {
     width: 60%;
     margin: 1rem 0 0 1rem;
     }
-    header.main img.logo-mini {
+header.main img.logo-mini {
     width: 60%;
     margin: 1rem 0 0 0.5rem;
     display: none;
     }
-    /* Side bar hide&seek */
-    div.hidden {
+figure:hover .play-button {
+    display: inline;
+    cursor: pointer;
+        }
+figure:hover {
+    filter: grayscale(60%);
+    opacity: 0.75;
+    cursor: pointer;
+}
+footer p.sinister:hover{
+    color: white;
+} 
+    
+
+
+/* Side bar hide&seek */
+div.hidden {
     display: none;
     }
-    header.main ul li {
+header.main ul li {
     list-style-type: none;
     margin-left: 2rem;
     font-weight: bold;
     font-size: 0.8rem;
     }
-    header.main ul li:first-child {
+header.main ul li:first-child {
     margin-top: 2rem;
     }
-    header.main ul li img {
+header.main ul li img {
     width: 12%;
     }
-    header.main h3 {
+header.main h3 {
     margin: 1rem 0 0 1rem;
     }
-    header.main ul.playlist i {
+header.main ul.playlist i {
     font-size: 3rem;
     vertical-align: middle;
     }
-    header.main ul.playlist li {
+header.main ul.playlist li {
     padding: 0.5rem 0;
     }
-    /*Div containers  */
-    div.down ul li:first-child {
+/*Div containers  */
+div.down ul li:first-child {
     font-size: 0.9rem;
     }
-    div.down img.download {
+div.down img.download {
     vertical-align: middle;
     font-size: 1rem;
     margin: 1rem;
     }
-    div.down img.profile {
+div.down img.profile {
     background-color: #808080;
     border-radius: 50%;
     vertical-align: middle;
     margin: 1rem;
     }
-    div.down ul li:last-child {
+div.down ul li:last-child {
     margin-bottom: 1rem;
     }
 
-    @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     div.disc {
         width: calc(100% / 4);
     }
     }
-    @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     div.disc {
         width: calc(100% / 2);
 
@@ -214,7 +315,7 @@
         flex-direction: column;
     }
     }
-    @media screen and (max-width: 576px){
+@media screen and (max-width: 576px){
     header.main {
         width: 50px;
     }
