@@ -102,20 +102,20 @@
     color: white;
     cursor: pointer;
     }
-    div.discs-firstrow {
+    div.discs-firs-trow {
     padding: 1rem 3rem;
     text-align: center;
     }
-    div.discs-firstrow h1 {
+    div.discs-first-row h1 {
     padding-bottom: 1rem;
     text-align: start;
     }
-    div.discs-firstrow h2 {
+    div.discs-first-row h2 {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
     line-height: 100%;
     }
-    div.discs-firstrow p {
+    div.discs-first-row p {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 0.9rem;
@@ -156,7 +156,7 @@
     display: none;
     }
     /* Side bar hide&seek */
-    div.vanish {
+    div.hidden {
     display: none;
     }
     header.main ul li {
@@ -234,11 +234,11 @@
         display: inline;
         margin-bottom: 1rem;
     }
-    div.vanish {
+    div.hidden {
         display: inline-block;
         align-items: center;
     }
-    div.vanish img {
+    div.hidden img {
         width: 60%;
         margin-left: 0.6rem;
         margin-bottom: 0.7rem;
