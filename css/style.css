@@ -75,7 +75,7 @@ footer img {
     height: 10%;
     display: block;
     margin: 1rem;
-        }
+}
 
 footer p.sinister {
     font-weight: bold;
@@ -91,9 +91,20 @@ p.footerlittle {
     }
     /* Player Structure */
 /* MAIN FOOTER SECTION WITH VOLUME SECTION */
+div#name-track{
+    margin-bottom: 1rem;
+}
+.fa-heart{
+    margin:0.3rem;
+}
+
+
 div.heart-folder {
-    margin: 1rem;
+    margin:1.7rem;
     }
+div.heart-folder:hover{
+
+}
 div.volumebar {
     width: 7vw;
     }
@@ -152,9 +163,13 @@ div.to-play-bar {
     vertical-align: middle;
     margin-right: 20px;
     }
+    
         
 /* Secondary Header */
-    
+    /* Library  */
+.discs-library{
+    margin:1rem;
+}
 header.secondary {
     height: 90px;
     background-color: #080b12;
@@ -219,13 +234,14 @@ figure img {
     
 }
 
+
 /* Button Section */
 .play-button {
     font-size: 3.5rem;
     color: white;
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 35%;
     transform: translateY(-50%);
     display: none;
     }
@@ -251,14 +267,25 @@ figure:hover {
     opacity: 0.75;
     cursor: pointer;
 }
- 
+.fa-heart:hover{
+    cursor: pointer;
+    color: white
+}
+.fa-folder:hover{
+    cursor: pointer;
+    color: white  
+}
+
     
 
 
 /* Side bar hide&seek */
 div.hidden {
     display: none;
-    }
+}
+div.hidden:hover{
+}
+
 header.main ul li {
     list-style-type: none;
     margin-left: 2rem;
@@ -342,5 +369,9 @@ div.down ul li:last-child {
         width: 60%;
         margin-left: 0.6rem;
         margin-bottom: 0.7rem;
+    }
+    
+    div.heart-folder {
+        flex-direction: column;
     }
     }
