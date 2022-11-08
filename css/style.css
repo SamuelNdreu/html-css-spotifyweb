@@ -4,9 +4,9 @@
     box-sizing: border-box;
     }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #7d7f84;
-    }
+}
     /* flex properties css */
 .flex {
     display: flex;
@@ -107,21 +107,7 @@ div.heart-folder {
 div.heart-folder:hover{
 
 }
-div.volumebar {
-    width: 7vw;
-    }
-div.volumedown {
-    height: 4px;
-    width: 10%;
-    background-color: #7d7f84;
-    vertical-align: middle;
-    }
-div.volumeup {
-    height: 4px;
-    width: 90%;
-    background-color: #3d3e41;
-    vertical-align: middle;
-    }
+
 div.footerright {
     margin: 0 1rem;
     }
@@ -176,6 +162,14 @@ div.played-bar i.fa-circle {
         color: white;
         display: none;
 }
+
+/* Volume Slider Test */
+
+    .slider input[type="range"] {
+    width: 100px;
+    border: none;
+    outline: none;
+    }
     
         
 /* Secondary Header */
@@ -199,6 +193,7 @@ button.upgrade {
     margin-right: 1rem;}
 button.upgrade:hover {
     transform: scale(1.1);
+    color: #adff2f;
     }
 nav.sec-navbar {
     text-align: center;
@@ -233,6 +228,7 @@ div.discs-first-row h2 {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
     line-height: 100%;
+    margin: 0.2rem;
     }
 div.discs-first-row p {
     padding-top: 0.5rem;
@@ -297,10 +293,10 @@ div.played-bar:hover {
     background-color: #adff2f;
     cursor: pointer;
 }
-div.volumebar,div.volumedown:hover{
+/* div.volumebar,div.volumedown:hover{
     background-color: #adff2f;
     cursor: pointer;
-}
+} */
 i.fa-circle-play:hover{
     color: #adff2f;
     cursor: pointer;
@@ -340,12 +336,12 @@ div.hidden:hover{
 
 header.main ul li {
     list-style-type: none;
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-weight: bold;
     font-size: 0.8rem;
     }
 header.main ul li:first-child {
-    margin-top: 2rem;
+    margin-top: 1rem;
     }
 header.main ul li img {
     width: 12%;
@@ -360,14 +356,43 @@ header.main ul.playlist i {
 header.main ul.playlist li {
     padding: 0.5rem 0;
     }
+header.main ul li.active {
+    margin-top: 1rem;
+    color: white;
+    position: relative;
+    }    
 /*Div containers  */
+
+div.green-tag {
+    height: 1.5rem;
+    width: 3px;
+    background-color: #adff2f;
+    box-shadow: 1px 1px 10px 3px rgb(1, 255, 86);
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+    position: absolute;
+    top: 1px;
+    right: 227px;
+}
+div.green-line {
+    background-color: #adff2f;
+    box-shadow: 1px 1px 10px 3px rgb(1, 255, 86);
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+    height: 3px;
+    width: 25px;
+    position: absolute;
+    top: 16px;
+    left: 50px;
+}
+
 div.down ul li:first-child {
     font-size: 0.9rem;
     }
 div.down img.download {
     vertical-align: middle;
     font-size: 1rem;
-    margin: 1rem;
+    margin: 0.5rem;
     }
 div.down img.profile {
     background-color: #808080;
@@ -396,6 +421,14 @@ div.down ul li:last-child {
     div.heart-folder {
         flex-direction: column;
     }
+    }
+    div.green-tag {
+        height: 1.5rem;
+        width: 3px;
+        background-color: #adff2f;
+        position: absolute;
+        top: 1px;
+        right: 227px;
     }
     /* Fone */
 
@@ -432,5 +465,6 @@ div.down ul li:last-child {
     div.heart-folder {
         flex-direction: column;
     }
+
     }
 

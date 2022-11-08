@@ -5,8 +5,14 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Spotify Web</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-            <link rel="stylesheet" href="./css/style.css">
+            <link rel="icon" type="img/x-icon" href="/img/favicon.ico">
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"/>
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            />
+        
         </head>
         <!-- Main Menu Side Bar -->
         <div class="container flex">
@@ -21,7 +27,9 @@
             <div>
             <img src="img/logo.svg" alt="logo" class="logo" />
             <ul>
-                <li><img src="img/home.svg" alt="home" />Home</li>
+                <li class="active">
+                    <img src="img/home.svg" alt="home" /> Home
+                    <div class="green-tag"></div>
                 <li><img src="img/search.svg" alt="search" />Cerca</li>
                 <li><img src="img/libreria.svg" alt="library" />La tua libreria</li>
             </ul>
@@ -66,7 +74,9 @@
             </header>
             <nav class="sec-navbar flex flex-centered">
             <ul>
-                <li>IN EVIDENZIAA</li>
+                <li>IN EVIDENZIAA
+                    <div class="green-line"></div>
+                </li>
                 <li>PODCAST</li>
                 <li>CLASSIFICHE</li>
                 <li>GENERI E MOOD</li>
@@ -257,9 +267,14 @@
                 <i class="fa-solid fa-bars"></i>
                 <i class="fa-solid fa-tv"></i>
                 <i class="fa-solid fa-volume-high"></i>
-                <div class="volumebar flex flex-between flex-centered align-center">
-                <div class="volumedown"></div>
-                <div class="volumeup"></div>
+                <div class="volumebar flex flex-between flex-centered align-center slider">
+                    <label for="fader"></label>
+                        <input type="range" min="0" max="100" value="50" id="fader" step="20" list="volsettings" class="radius-color">
+                        <datalist id="volsettings">
+                            <option>0</option>
+                            <option>50</option>
+                            <option>100</option>
+                            </datalist>
                 </div>
             </div>
         </footer>
