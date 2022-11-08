@@ -119,6 +119,7 @@ div.player-buttons i {
     margin: 0rem 1rem 1rem 1rem;
     color: white;
     font-size: 0.9;
+    cursor: pointer;
     }
 
 div.player-buttons i:nth-child(3) {
@@ -250,9 +251,7 @@ figure:hover {
     opacity: 0.75;
     cursor: pointer;
 }
-footer p.sinister:hover{
-    color: white;
-} 
+ 
     
 
 
