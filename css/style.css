@@ -165,6 +165,17 @@ div.to-play-bar {
     vertical-align: middle;
     margin-right: 20px;
     }
+div.played-bar:hover i.fa-circle {
+        display: inline;
+        cursor: pointer;
+}
+div.played-bar i.fa-circle {
+        position: absolute;
+        bottom: -5px;
+        left: 95%;
+        color: white;
+        display: none;
+}
     
         
 /* Secondary Header */
@@ -282,8 +293,42 @@ figure:hover {
     cursor: pointer;
     color: white  
 }
+div.played-bar:hover {
+    background-color: #adff2f;
+    cursor: pointer;
+}
+div.volumebar,div.volumedown:hover{
+    background-color: #adff2f;
+    cursor: pointer;
+}
+i.fa-circle-play:hover{
+    color: #adff2f;
+    cursor: pointer;
+}
+i.fa-shuffle:hover{
+    color: #adff2f;
+    cursor: pointer;
+}
+i.fa-repeat:hover{
+    color: #adff2f;
+    cursor: pointer;
+}
+p.sinister:hover{
+    color: #adff2f;
+    cursor: pointer;
+}
+h2:hover{
+    color: #adff2f;
+    cursor: pointer;
+}
 
-    
+
+div.played-bar:hover i.fa-circle {
+    display: inline;
+    cursor: pointer;
+}
+
+
 
 
 /* Side bar hide&seek */
@@ -334,11 +379,15 @@ div.down ul li:last-child {
     margin-bottom: 1rem;
     }
 
+/* Responsivness Section */
+/* Desktop */
+
 @media screen and (max-width: 992px) {
     div.disc {
         width: calc(100% / 4);
     }
     }
+    /* Taaableeet */
 @media screen and (max-width: 768px) {
     div.disc {
         width: calc(100% / 2);
@@ -348,6 +397,7 @@ div.down ul li:last-child {
         flex-direction: column;
     }
     }
+    /* Fone */
 
 @media screen and (max-width: 576px){
     header.main {
